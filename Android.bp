@@ -43,6 +43,11 @@ cc_defaults {
     local_include_dirs: ["src/include"],
     export_include_dirs: ["src/include"],
     cflags: ["-DBORINGSSL_IMPLEMENTATION"],
+    arch: {
+        morello: {
+            cflags: ["-DOPENSSL_NO_ASM"],
+        },
+    },
 }
 
 //// libcrypto

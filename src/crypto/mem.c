@@ -69,7 +69,7 @@ OPENSSL_MSVC_PRAGMA(warning(pop))
 #include "internal.h"
 
 
-#define OPENSSL_MALLOC_PREFIX 8
+#define OPENSSL_MALLOC_PREFIX 16
 
 #if defined(OPENSSL_ASAN)
 void __asan_poison_memory_region(const volatile void *addr, size_t size);

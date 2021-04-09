@@ -172,7 +172,7 @@ OPENSSL_EXPORT size_t EVP_AEAD_max_tag_len(const EVP_AEAD *aead);
 
 union evp_aead_ctx_st_state {
   uint8_t opaque[580];
-  uint64_t alignment;
+  uint64_t _Alignas(64) alignment;
 };
 
 // An EVP_AEAD_CTX represents an AEAD algorithm configured with a specific key
